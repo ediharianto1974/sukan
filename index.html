@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kejohanan Olahraga SK Abang Gesa 2025</title>
+    <style>
+        /* [STYLESHEET KEKAL SAMA] */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo h1 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+            color: #e74c3c;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #34495e;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background: #3498db;
+            color: white;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Sections */
+        section {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: #34495e;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        /* Forms */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+
+        button {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+        }
+
+        button.secondary {
+            background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+        }
+
+        button.danger {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        th {
+            background: linear-gradient(135deg, #34495e, #2c3e50);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #f8f9fa;
+        }
+
+        /* Status Messages */
+        .status-message {
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .status-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .status-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .status-info {
+            background: #cce7ff;
+            color: #004085;
+            border: 1px solid #b3d7ff;
+        }
+
+        /* Record Broken Animation */
+        .record-broken {
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            color: #8b6914;
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            animation: pulse 2s infinite;
+            border: 2px solid #ffc107;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Champion Display */
+        .champion-display {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            border-radius: 15px;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .champion-display h2 {
+            color: #8b6914;
+            border-bottom: 3px solid #8b6914;
+        }
+
+        .champion-house {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #8b6914;
+            margin: 1rem 0;
+        }
+
+        /* File Upload */
+        .file-upload {
+            border: 2px dashed #3498db;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin: 1rem 0;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+        }
+
+        .file-upload:hover {
+            border-color: #2980b9;
+            background: #e9ecef;
+        }
+
+        .file-upload input {
+            display: none;
+        }
+
+        .file-upload label {
+            cursor: pointer;
+            padding: 1rem 2rem;
+            background: #3498db;
+            color: white;
+            border-radius: 8px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .file-upload label:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        /* Utility Classes */
+        .hidden {
+            display: none !important;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-2 { margin-top: 2rem; }
+        .mb-2 { margin-bottom: 2rem; }
+
+        /* Lane Assignment */
+        .lane-assignment {
+            background: #e8f4fc;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .lane-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: #3498db;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 0.5rem;
+            font-weight: bold;
+        }
+
+        .lane-item {
+            padding: 0.5rem;
+            margin: 0.25rem 0;
+            background: white;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            main {
+                padding: 0 1rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 0.5rem;
+            }
+        }
+
+        /* Login Form */
+        .login-container {
+            max-width: 400px;
+            margin: 2rem auto;
+            text-align: center;
+        }
+
+        .user-type-selector {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .user-type-btn {
+            flex: 1;
+            padding: 1rem;
+            border: 2px solid #3498db;
+            background: white;
+            color: #3498db;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .user-type-btn.active {
+            background: #3498db;
+            color: white;
+        }
+        
+        .user-info {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        /* Event Selection */
+        .event-selection {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .event-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-color: #3498db;
+        }
+
+        .event-card.active {
+            background: #3498db;
+            color: white;
+        }
+
+        .event-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script> </head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">🏃‍♂️</div>
+                <h1>Kejohanan Olahraga SK Abang Gesa 2025</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" id="nav-analysis" class="active">Analisis</a></li>
+                    <li><a href="#" id="nav-generate" class="admin-only hidden">Jana Borang</a></li>
+                    <li><a href="#" id="nav-upload" class="admin-only hidden">Muat Naik Data</a></li>
+                    <li><a href="#" id="nav-login">Log Masuk</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="login-section" class="active">
+            <div class="container login-container">
+                <h2 id="login-header">Log Masuk Sistem</h2>
+                
+                <div id="logged-in-message" class="hidden">
+                    <p>Anda log masuk sebagai: <span class="user-info" id="user-email-display"></span></p>
+                    <p>Peranan: <span class="user-info" id="user-role-display"></span></p>
+                    <button id="logout-btn" class="danger mt-2">Log Keluar</button>
+                </div>
+                
+                <form id="login-form">
+                    <div class="user-type-selector">
+                        <button class="user-type-btn active" data-role="user" type="button">Pengguna Biasa</button>
+                        <button class="user-type-btn" data-role="admin" type="button">Administrator</button>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="username" placeholder="Emel" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" placeholder="Kata Laluan" required>
+                    </div>
+                    <button type="submit">Log Masuk</button>
+                </form>
+                <div class="status-message status-info mt-2">
+                    <strong>Peringatan Firebase Auth:</strong> Anda perlu mendaftar pengguna di Konsol Firebase dan menetapkan peranan dalam koleksi `userRoles` Firestore.
+                </div>
+            </div>
+        </section>
+
+        <section id="analysis-section">
+            <div class="container">
+                <h2>Analisis Keputusan Kejohanan</h2>
+                
+                <div id="record-alerts"></div>
+
+                <div class="event-selection">
+                    <div class="event-card active" data-event="all">
+                        <div class="event-icon">📊</div>
+                        <h3>Semua Acara</h3>
+                    </div>
+                    <div class="event-card" data-event="track">
+                        <div class="event-icon">🏃‍♀️</div>
+                        <h3>Acara Balapan</h3>
+                    </div>
+                    <div class="event-card" data-event="field">
+                        <div class="event-icon">⛹️‍♂️</div>
+                        <h3>Acara Padang</h3>
+                    </div>
+                    <div class="event-card" data-event="relay">
+                        <div class="event-icon">🔄</div>
+                        <h3>Acara Relay</h3>
+                    </div>
+                </div>
+
+                <div id="results-container">
+                    <h3>Keputusan Acara</h3>
+                    <table id="results-table">
+                        <thead>
+                            <tr>
+                                <th>Acara</th>
+                                <th>Peserta/Pasukan</th>
+                                <th>Rumah Sukan</th>
+                                <th>Catatan</th>
+                                <th>Kedudukan</th>
+                                <th>Mata</th>
+                            </tr>
+                        </thead>
+                        <tbody id="results-body">
+                            </tbody>
+                    </table>
+                </div>
+
+                <div id="points-table-container" class="mt-2">
+                    <h3>Jadual Mata Rumah Sukan</h3>
+                    <table id="points-table">
+                        <thead>
+                            <tr>
+                                <th>Rumah Sukan</th>
+                                <th>Jumlah Mata</th>
+                                <th>Acara Dimenangi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="points-body">
+                            </tbody>
+                    </table>
+                </div>
+
+                <div id="champion-container" class="mt-2">
+                    </div>
+            </div>
+        </section>
+
+        <section id="generate-section">
+            <div class="container">
+                <h2>Jana Borang Acara</h2>
+                
+                <div class="form-group">
+                    <label for="event-type">Jenis Acara:</label>
+                    <select id="event-type">
+                        <option value="individual">Acara Individu</option>
+                        <option value="relay">Acara Relay</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="event-category">Acara:</label>
+                    <select id="event-category">
+                        <option value="100 METER">100 Meter</option>
+                        <option value="200 METER">200 Meter</option>
+                        <option value="100 METER BERPAGAR">100 Meter Berpagar</option>
+                        <option value="LOMPAT JAUH">Lompat Jauh</option>
+                        <option value="LOMPAT TINGGI">Lompat Tinggi</option>
+                        <option value="LONTAR PELURU">Lontar Peluru</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="age-category">Kategori Umur:</label>
+                    <select id="age-category">
+                        <option value="7 TAHUN">7 Tahun</option>
+                        <option value="8 TAHUN">8 Tahun</option>
+                        <option value="9 TAHUN">9 Tahun</option>
+                        <option value="10 TAHUN">10 Tahun</option>
+                        <option value="11 TAHUN">11 Tahun</option>
+                        <option value="12 TAHUN">12 Tahun</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Jantina:</label>
+                    <select id="gender">
+                        <option value="LELAKI">Lelaki</option>
+                        <option value="PEREMPUAN">Perempuan</option>
+                    </select>
+                </div>
+
+                <button id="generate-form-btn">Jana Borang</button>
+
+                <div id="lane-assignment-container" class="mt-2">
+                    </div>
+
+                <div id="form-container" class="mt-2">
+                    </div>
+            </div>
+        </section>
+
+        <section id="upload-section">
+            <div class="container">
+                <h2>Muat Naik Data</h2>
+                
+                <div class="file-upload">
+                    <input type="file" id="data-csv" accept=".csv">
+                    <label for="data-csv">Muat Naik data.csv</label>
+                    <p>Fail mesti mengandungi: IDPeserta,NamaPenuh,RumahSukan,Jantina,UmurKAtegori,Acara1,Acara2,Acara3,AcaraRelay</p>
+                </div>
+
+                <div class="file-upload">
+                    <input type="file" id="record-csv" accept=".csv">
+                    <label for="record-csv">Muat Naik rekod.csv</label>
+                    <p>Fail mengandungi rekod sedia ada untuk setiap acara</p>
+                </div>
+
+                <div id="upload-status" class="status-message"></div>
+
+                <div id="upload-preview" class="mt-2">
+                    </div>
+
+                <div class="mt-2 admin-only hidden">
+                    <h3>Pentadbiran Data</h3>
+                    <button id="reset-data-btn" class="danger">⚠️ PADAM / RESET SEMUA DATA ⚠️</button>
+                    <p class="status-error text-center">Tindakan ini tidak boleh diterbalikkan dan akan memadamkan semua data dalam Firebase!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Data Storage
+        let currentUser = null;
+        let participants = [];
+        let records = [];
+        let eventResults = [];
+        let housePoints = {};
+
+        // 1. FIREBASE CONFIGURATION DAN INIT
+        const firebaseConfig = {
+            /* GANTIKAN DENGAN FIREBASE CONFIG ANDA */
+            apiKey: "AIzaSyDEUD4WGKgWnGtjFtHF3n4xFkBMu54eIqs",
+            authDomain: "sukantahunan-c2ea7.firebaseapp.com",
+            projectId: "sukantahunan-c2ea7",
+            storageBucket: "sukantahunan-c2ea7.firebasestorage.app",
+            messagingSenderId: "682630933900",
+            appId: "1:682630933900:web:01eb3bb4ac1d9ede383aa9"
+        };
+
+        // Initialize Firebase
+        if (!firebase.apps.length) {
+            firebase.initializeApp(firebaseConfig);
+        }
+        const db = firebase.firestore();
+        const auth = firebase.auth(); // INIT FIREBASE AUTH
+
+        // Constants for Firestore Collections
+        const COLLECTIONS = {
+            PARTICIPANTS: 'participants',
+            RECORDS: 'records',
+            RESULTS: 'eventResults',
+            LANE_ASSIGNMENTS: 'laneAssignments',
+            USER_ROLES: 'userRoles' // KOLEKSI UNTUK PERANAN PENGGUNA
+        };
+
+
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeApp();
+            setupEventListeners();
+        });
+
+        async function initializeApp() {
+            // Set initial UI state
+            showSection('login-section');
+            updateUIForUser();
+            
+            // 3. PENGURUSAN SESI DENGAN onAuthStateChanged
+            auth.onAuthStateChanged(async (user) => {
+                if (user) {
+                    // User is signed in. Look up role.
+                    const roleDoc = await db.collection(COLLECTIONS.USER_ROLES).doc(user.uid).get();
+                    let role = roleDoc.exists ? roleDoc.data().role : 'user';
+                    
+                    currentUser = { role: role, name: user.email, uid: user.uid };
+                    
+                    // Load data and refresh UI
+                    await loadDataFromFirebase();
+                    updateUIForUser();
+                    
+                    // Navigate to analysis if currently on login screen
+                    if (document.getElementById('login-section').classList.contains('active')) {
+                        showSuccess(`Sesi berterusan: Log masuk sebagai ${currentUser.role.toUpperCase()} (${currentUser.name})`);
+                        showSection('analysis-section');
+                    }
+                } else {
+                    // User is signed out.
+                    currentUser = null;
+                    updateUIForUser();
+                    showSection('login-section');
+                }
+            });
+        }
+
+        function setupEventListeners() {
+            // Navigation
+            document.getElementById('nav-analysis').addEventListener('click', () => showSection('analysis-section'));
+            document.getElementById('nav-generate').addEventListener('click', () => showSection('generate-section'));
+            document.getElementById('nav-upload').addEventListener('click', () => showSection('upload-section'));
+            
+            // 4. LOG MASUK / LOG KELUAR
+            document.getElementById('nav-login').addEventListener('click', handleAuthAction);
+            
+            // Login
+            document.getElementById('login-form').addEventListener('submit', handleLogin);
+            
+            // Logout Button (for logged-in message)
+            document.getElementById('logout-btn').addEventListener('click', handleAuthAction);
+            
+            // User type selection (only for display/initial purpose, role is determined by Firestore)
+            document.querySelectorAll('.user-type-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.user-type-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Event selection
+            document.querySelectorAll('.event-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    document.querySelectorAll('.event-card').forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+                    filterResults(this.dataset.event);
+                });
+            });
+
+            // Generate form
+            document.getElementById('generate-form-btn').addEventListener('click', generateEventForm);
+
+            // File uploads
+            document.getElementById('data-csv').addEventListener('change', (e) => handleFileUpload(e, COLLECTIONS.PARTICIPANTS, 'Peserta'));
+            document.getElementById('record-csv').addEventListener('change', (e) => handleFileUpload(e, COLLECTIONS.RECORDS, 'Rekod'));
+
+            // Padam / Reset Data
+            document.getElementById('reset-data-btn').addEventListener('click', handleResetData);
+        }
+        
+        // --- FIREBASE DATA FUNCTIONS (CRUD) ---
+        // ... (loadDataFromFirebase, saveCollectionToFirebase kekal sama) ...
+        async function loadDataFromFirebase() {
+            try {
+                // Load Participants
+                const pSnapshot = await db.collection(COLLECTIONS.PARTICIPANTS).get();
+                participants = pSnapshot.docs.map(doc => doc.data());
+                
+                // Load Records
+                const rSnapshot = await db.collection(COLLECTIONS.RECORDS).get();
+                records = rSnapshot.docs.map(doc => doc.data());
+
+                // Load Event Results
+                const eSnapshot = await db.collection(COLLECTIONS.RESULTS).get();
+                eventResults = eSnapshot.docs.map(doc => doc.data());
+
+                // Recalculate points based on loaded results
+                calculateHousePoints();
+
+                console.log('Data loaded from Firebase:', { participants: participants.length, records: records.length, results: eventResults.length });
+            } catch (error) {
+                console.error("Error loading data from Firebase: ", error);
+                showError("Gagal memuatkan data dari pangkalan data.");
+            }
+        }
+
+        async function saveCollectionToFirebase(collectionName, dataArray) {
+            if (!dataArray || dataArray.length === 0) return;
+
+            const batch = db.batch();
+            
+            // Clear existing collection first (simulating full upload replacement)
+            const oldSnapshot = await db.collection(collectionName).get();
+            oldSnapshot.docs.forEach(doc => {
+                batch.delete(doc.ref);
+            });
+            
+            // Add new data (must respect the 500 operation limit per batch for production use)
+            dataArray.forEach(item => {
+                let docRef;
+                if (collectionName === COLLECTIONS.PARTICIPANTS) {
+                    docRef = db.collection(collectionName).doc(item.IDPeserta);
+                } else if (collectionName === COLLECTIONS.RECORDS) {
+                    // Use ACARA as document ID for records
+                    docRef = db.collection(collectionName).doc(item.ACARA.replace(/\s/g, '_')); 
+                } else {
+                    docRef = db.collection(collectionName).doc(); // Auto ID for others
+                }
+                
+                batch.set(docRef, item);
+            });
+
+            await batch.commit();
+            return dataArray.length;
+        }
+
+        // --- AUTHENTICATION & UI ---
+
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('main section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show target section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Update navigation
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Update active nav link
+            const navId = 'nav-' + sectionId.replace('-section', '');
+            const activeNav = document.getElementById(navId);
+            if (activeNav) activeNav.classList.add('active');
+            
+            // Refresh section content if needed
+            if (sectionId === 'analysis-section') {
+                displayAnalysis();
+            }
+        }
+        
+        // FUNGSI AUTH UTAMA
+        async function handleAuthAction(e) {
+            e.preventDefault();
+            
+            // Jika pengguna sudah log masuk, tindakannya adalah Log Keluar
+            if (currentUser) {
+                try {
+                    await auth.signOut();
+                    // onAuthStateChanged akan mengendalikan pembersihan currentUser dan UI
+                    showSuccess('Berjaya log keluar.');
+                } catch (error) {
+                    showError('Gagal log keluar.');
+                    console.error("Logout Error:", error);
+                }
+            } else {
+                // Jika pengguna belum log masuk, navigasi ke halaman login
+                showSection('login-section');
+            }
+        }
+
+        // 4. PENGENDALI LOGIN MENGGUNAKAN FIREBASE AUTH
+        async function handleLogin(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            // Reset status
+            document.getElementById('login-form').reset();
+
+            try {
+                // 1. Firebase Sign In
+                const userCredential = await auth.signInWithEmailAndPassword(email, password);
+                const user = userCredential.user;
+
+                // 2. Firestore Role Lookup (Check the role set by the administrator)
+                const roleDoc = await db.collection(COLLECTIONS.USER_ROLES).doc(user.uid).get();
+                
+                if (!roleDoc.exists) {
+                    // Default to 'user' if no explicit role is defined
+                    currentUser = { role: 'user', name: user.email, uid: user.uid };
+                    showInfo("Peranan pengguna tidak dijumpai di Firestore. Peranan ditetapkan sebagai Pengguna Biasa.");
+                } else {
+                    currentUser = { role: roleDoc.data().role, name: user.email, uid: user.uid };
+                }
+                
+                // onAuthStateChanged akan mengendalikan pemuatan data dan navigasi
+                showSuccess(`Log masuk sebagai ${currentUser.role.toUpperCase()} (${currentUser.name}) berjaya!`);
+
+            } catch (error) {
+                // Handle common Firebase Auth errors
+                let errorMessage = "Gagal log masuk. Sila semak emel dan kata laluan anda.";
+                if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password') {
+                    errorMessage = "Emel atau kata laluan tidak sah.";
+                } else if (error.code === 'auth/invalid-email') {
+                    errorMessage = "Format emel tidak sah.";
+                }
+                console.error("Firebase Auth Error:", error);
+                showError(errorMessage);
+            }
+        }
+
+        function updateUIForUser() {
+            const adminElements = document.querySelectorAll('.admin-only');
+            const navLogin = document.getElementById('nav-login');
+            const loginForm = document.getElementById('login-form');
+            const loggedInMsg = document.getElementById('logged-in-message');
+            const userEmailDisplay = document.getElementById('user-email-display');
+            const userRoleDisplay = document.getElementById('user-role-display');
+
+            if (currentUser && currentUser.role) {
+                // Logged In State
+                navLogin.textContent = 'Log Keluar';
+                navLogin.classList.remove('active'); // Remove active class if it was applied
+                loginForm.classList.add('hidden');
+                loggedInMsg.classList.remove('hidden');
+                
+                userEmailDisplay.textContent = currentUser.name;
+                userRoleDisplay.textContent = currentUser.role.toUpperCase();
+
+                if (currentUser.role === 'admin') {
+                    adminElements.forEach(el => el.classList.remove('hidden'));
+                } else {
+                    adminElements.forEach(el => el.classList.add('hidden'));
+                }
+            } else {
+                // Logged Out State
+                navLogin.textContent = 'Log Masuk';
+                loginForm.classList.remove('hidden');
+                loggedInMsg.classList.add('hidden');
+                adminElements.forEach(el => el.classList.add('hidden'));
+            }
+        }
+        
+        // ... (Fungsi lain kekal sama) ...
+        
+        // --- FILE UPLOAD & PARSING ---
+        async function handleFileUpload(e, collectionName, dataTitle) {
+            if (!currentUser || currentUser.role !== 'admin') {
+                showError('Hanya admin boleh memuat naik data.');
+                return;
+            }
+            // ... (rest of the file upload logic) ...
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = async function(event) {
+                try {
+                    const csvData = event.target.result;
+                    const parsedData = parseCSV(csvData);
+                    
+                    const count = await saveCollectionToFirebase(collectionName, parsedData);
+
+                    if (collectionName === COLLECTIONS.PARTICIPANTS) {
+                        participants = parsedData;
+                    } else if (collectionName === COLLECTIONS.RECORDS) {
+                        records = parsedData;
+                    }
+
+                    showSuccess(`Berjaya memuat naik ${count} ${dataTitle}`);
+                    displayUploadPreview(parsedData, `${dataTitle} (Dari CSV)`);
+                } catch (error) {
+                    console.error("Error during file upload and saving:", error);
+                    showError(`Gagal memuat naik ${dataTitle}. Sila semak format fail.`);
+                }
+            };
+            reader.readAsText(file);
+        }
+        
+        function parseCSV(csvText) {
+            // ... (Parsing logic kekal sama) ...
+            const lines = csvText.split('\n').filter(line => line.trim() !== '');
+            const result = [];
+            
+            // Handle inconsistent line endings/trailing commas
+            const headers = lines[0].split(',').map(h => h.trim());
+
+            for (let i = 1; i < lines.length; i++) {
+                const obj = {};
+                const currentline = lines[i].split(',').map(item => item.trim());
+
+                for (let j = 0; j < headers.length; j++) {
+                    obj[headers[j]] = currentline[j] || '';
+                }
+
+                result.push(obj);
+            }
+
+            return result;
+        }
+
+        function displayUploadPreview(data, title) {
+            // ... (Display logic kekal sama) ...
+            const container = document.getElementById('upload-preview');
+            if (!data.length) {
+                container.innerHTML = '<p>Tiada data untuk dipaparkan</p>';
+                return;
+            }
+
+            let html = `<h3>Pratonton ${title}</h3>`;
+            html += '<div style="max-height: 300px; overflow-y: auto;">';
+            html += '<table><thead><tr>';
+
+            Object.keys(data[0]).forEach(key => {
+                html += `<th>${key}</th>`;
+            });
+
+            html += '</tr></thead><tbody>';
+
+            data.slice(0, 10).forEach(row => {
+                html += '<tr>';
+                Object.values(row).forEach(value => {
+                    html += `<td>${value}</td>`;
+                });
+                html += '</tr>';
+            });
+
+            html += '</tbody></table></div>';
+
+            if (data.length > 10) {
+                html += `<p class="text-center">... dan ${data.length - 10} lagi baris</p>`;
+            }
+
+            container.innerHTML = html;
+        }
+
+        // --- FORM GENERATION & LANE ASSIGNMENT ---
+
+        async function generateEventForm() {
+            if (!currentUser || currentUser.role !== 'admin') {
+                showError('Hanya admin boleh menjana borang');
+                return;
+            }
+
+            const eventType = document.getElementById('event-type').value;
+            const eventCategory = document.getElementById('event-category').value;
+            const ageCategory = document.getElementById('age-category').value;
+            const gender = document.getElementById('gender').value;
+            const eventId = `${eventCategory.replace(/\s/g, '_')}_${gender.substring(0, 1)}_${ageCategory.replace(/\s/g, '_')}`;
+
+            const container = document.getElementById('form-container');
+            const laneContainer = document.getElementById('lane-assignment-container');
+            
+            try {
+                // SEMAK DAN MUATKAN BORANG TERSIMPAN DARI FIREBASE
+                const assignmentDoc = await db.collection(COLLECTIONS.LANE_ASSIGNMENTS).doc(eventId).get();
+                let laneAssignments = null;
+
+                if (assignmentDoc.exists) {
+                    laneAssignments = assignmentDoc.data().assignments;
+                    showInfo(`Memuatkan borang yang telah dijana untuk acara ${eventId}.`);
+                } else {
+                    // Borang belum dijana, Jana baru
+                    showInfo(`Menjana borang baharu untuk acara ${eventId}.`);
+                    
+                    let participantsOrTeams;
+                    if (eventType === 'individual') {
+                        participantsOrTeams = participants.filter(p => {
+                            const hasEvent = p.Acara1 === eventCategory || p.Acara2 === eventCategory || p.Acara3 === eventCategory;
+                            return hasEvent && p.Jantina === gender && p.UmurKAtegori === ageCategory;
+                        });
+                    } else { // relay
+                        participantsOrTeams = generateRelayTeams(ageCategory, gender);
+                    }
+                    
+                    laneAssignments = generateLaneAssignments(participantsOrTeams, eventType === 'relay');
+                    
+                    // Simpan ke Firebase
+                    await db.collection(COLLECTIONS.LANE_ASSIGNMENTS).doc(eventId).set({
+                        eventId: eventId,
+                        eventType: eventType,
+                        eventCategory: eventCategory,
+                        ageCategory: ageCategory,
+                        gender: gender,
+                        assignments: laneAssignments,
+                        timestamp: new Date().toISOString()
+                    });
+                }
+                
+                // Paparkan borang
+                let formResult;
+                if (eventType === 'individual') {
+                    formResult = generateIndividualFormHTML(eventCategory, ageCategory, gender, eventId, laneAssignments);
+                } else {
+                    formResult = generateRelayFormHTML(eventCategory, ageCategory, gender, eventId, laneAssignments);
+                }
+
+                container.innerHTML = formResult.formHTML;
+                laneContainer.innerHTML = formResult.laneHTML;
+
+                // Add event listeners to the generated form
+                setTimeout(() => {
+                    const form = document.getElementById('event-form');
+                    if (form) {
+                        form.addEventListener('submit', handleFormSubmit);
+                    }
+                    
+                    const calculateBtn = document.getElementById('calculate-positions');
+                    if (calculateBtn) {
+                        calculateBtn.addEventListener('click', calculatePositions);
+                    }
+                }, 100);
+
+            } catch (error) {
+                console.error("Error generating form:", error);
+                showError("Gagal menjana borang. Sila semak data peserta.");
+            }
+        }
+
+        function generateIndividualFormHTML(eventCategory, ageCategory, gender, eventId, laneAssignments) {
+            const laneHTML = generateLaneDisplay(laneAssignments, false);
+
+            let formHTML = `<h3>Borang Acara Individu: ${eventCategory} ${gender} ${ageCategory}</h3>`;
+            formHTML += `<form id="event-form" data-event-id="${eventId}" data-event-type="individual">`;
+            formHTML += `<table><thead><tr>
+                <th>Lorong</th>
+                <th>ID Peserta</th>
+                <th>Nama Peserta</th>
+                <th>Rumah Sukan</th>
+                <th>Catatan</th>
+                <th>Kedudukan</th>
+            </tr></thead><tbody>`;
+
+            laneAssignments.forEach((assignment) => {
+                const participant = assignment.participant;
+                formHTML += `<tr>
+                    <td>${assignment.lane}</td>
+                    <td>${participant.IDPeserta}</td>
+                    <td>${participant.NamaPenuh}</td>
+                    <td>${participant.RumahSukan}</td>
+                    <td><input type="text" name="record-${participant.IDPeserta}" placeholder="${getRecordPlaceholder(eventCategory)}"></td>
+                    <td class="position-cell" id="position-${participant.IDPeserta}">-</td>
+                </tr>`;
+            });
+
+            formHTML += `</tbody></table>`;
+            formHTML += `<button type="button" id="calculate-positions">Kira Kedudukan</button>`;
+            formHTML += `<button type="submit">Simpan Keputusan</button>`;
+            formHTML += `</form>`;
+
+            return { formHTML, laneHTML };
+        }
+
+        function generateRelayFormHTML(eventCategory, ageCategory, gender, eventId, laneAssignments) {
+            const laneHTML = generateLaneDisplay(laneAssignments, true);
+
+            let formHTML = `<h3>Borang Acara Relay: ${eventCategory} ${gender} ${ageCategory}</h3>`;
+            formHTML += `<form id="event-form" data-event-id="${eventId}" data-event-type="relay">`;
+            formHTML += `<table><thead><tr>
+                <th>Lorong</th>
+                <th>ID Pasukan</th>
+                <th>Nama Pasukan</th>
+                <th>Rumah Sukan</th>
+                <th>Ahli Pasukan</th>
+                <th>Catatan</th>
+                <th>Kedudukan</th>
+            </tr></thead><tbody>`;
+
+            laneAssignments.forEach((assignment) => {
+                const team = assignment.participant;
+                formHTML += `<tr>
+                    <td>${assignment.lane}</td>
+                    <td>${team.id}</td>
+                    <td>${team.name}</td>
+                    <td>${team.house}</td>
+                    <td>${team.members.map(m => m.NamaPenuh).join(', ')}</td>
+                    <td><input type="text" name="record-${team.id}" placeholder="Masa (contoh: 00:00:58:12)"></td>
+                    <td class="position-cell" id="position-${team.id}">-</td>
+                </tr>`;
+            });
+
+            formHTML += `</tbody></table>`;
+            formHTML += `<button type="button" id="calculate-positions">Kira Kedudukan</button>`;
+            formHTML += `<button type="submit">Simpan Keputusan</button>`;
+            formHTML += `</form>`;
+
+            return { formHTML, laneHTML };
+        }
+        
+        function generateLaneAssignments(participantsOrTeams, isTeam = false) {
+            const assignments = [];
+            const lanes = [1, 2, 3, 4, 5, 6, 7, 8];
+            const shuffledLanes = [...lanes].sort(() => Math.random() - 0.5);
+            
+            const byHouse = {};
+            participantsOrTeams.forEach(item => {
+                const house = isTeam ? item.house : item.RumahSukan;
+                if (!byHouse[house]) byHouse[house] = [];
+                byHouse[house].push(item);
+            });
+
+            const result = [];
+            const houses = Object.keys(byHouse);
+            let houseIndex = 0;
+            let laneIndex = 0;
+
+            while (result.length < participantsOrTeams.length && laneIndex < shuffledLanes.length) {
+                const house = houses[houseIndex % houses.length];
+                if (byHouse[house].length > 0) {
+                    const participant = byHouse[house].shift();
+                    result.push({
+                        lane: shuffledLanes[laneIndex],
+                        participant: participant
+                    });
+                    laneIndex++;
+                }
+                houseIndex++;
+            }
+
+            return result.sort((a, b) => a.lane - b.lane);
+        }
+
+        function generateLaneDisplay(assignments, isTeam = false) {
+            let html = `<div class="lane-assignment">`;
+            html += `<h4>Penjanaan Lorong ${isTeam ? 'Pasukan' : 'Peserta'}</h4>`;
+            
+            assignments.forEach(assignment => {
+                const name = isTeam ? 
+                    assignment.participant.name : 
+                    assignment.participant.NamaPenuh;
+                
+                const house = isTeam ? 
+                    assignment.participant.house : 
+                    assignment.participant.RumahSukan;
+                
+                html += `<div class="lane-item">
+                    <span class="lane-number">${assignment.lane}</span>
+                    ${name} (${house})
+                </div>`;
+            });
+            
+            html += `</div>`;
+            return html;
+        }
+
+        function generateRelayTeams(ageCategory, gender) {
+            const teams = [];
+            const houses = {};
+
+            const relayParticipants = participants.filter(p => 
+                p.AcaraRelay && p.AcaraRelay.includes('4X100 METER') && 
+                p.Jantina === gender && 
+                p.UmurKAtegori === ageCategory
+            );
+
+            relayParticipants.forEach(participant => {
+                if (!houses[participant.RumahSukan]) {
+                    houses[participant.RumahSukan] = [];
+                }
+                houses[participant.RumahSukan].push(participant);
+            });
+
+            for (const house in houses) {
+                if (houses[house].length >= 4) {
+                    const teamMembers = houses[house].slice(0, 4);
+                    teams.push({
+                        id: `T-${house}-${ageCategory.replace(' ', '')}-${gender.substring(0, 1)}`,
+                        name: `Pasukan ${house}`,
+                        house: house,
+                        members: teamMembers
+                    });
+                }
+            }
+
+            return teams;
+        }
+
+        function getRecordPlaceholder(eventCategory) {
+            if (eventCategory.includes('METER')) {
+                return 'Masa (contoh: 00:00:12:50)';
+            } else if (eventCategory.includes('LOMPAT') || eventCategory.includes('LONTAR')) {
+                return 'Jarak (contoh: 4.50)';
+            }
+            return 'Catatan';
+        }
+
+        // --- CALCULATION & SUBMISSION ---
+
+        function calculatePositions() {
+            const recordsData = [];
+            const form = document.getElementById('event-form');
+            const eventType = form.dataset.eventType;
+
+            // Collect all records
+            form.querySelectorAll('tbody tr').forEach(row => {
+                const cells = row.cells;
+                const id = cells[1].textContent;
+                const house = cells[3].textContent;
+                const recordInput = row.querySelector('input');
+                const recordValue = recordInput.value.trim();
+                
+                if (recordValue) {
+                    recordsData.push({
+                        id: id,
+                        house: house,
+                        record: recordValue,
+                        // PEMBETULAN LOGIK: Tetapkan isTime berdasarkan kategori acara yang dipilih
+                        isTime: !document.getElementById('event-category').value.includes('LOMPAT') && !document.getElementById('event-category').value.includes('LONTAR')
+                    });
+                }
+            });
+
+            // PEMBETULAN LOGIK: SORT BERDASARKAN JENIS ACARA
+            recordsData.sort((a, b) => {
+                if (a.isTime) {
+                    // Time records (Balapan): lower is better (ascending)
+                    return compareTimes(a.record, b.record);
+                }
+                // Distance records (Padang): higher is better (descending)
+                else {
+                    const aNum = parseFloat(a.record);
+                    const bNum = parseFloat(b.record);
+                    return bNum - aNum; 
+                }
+            });
+
+            // Assign positions and display
+            recordsData.forEach((record, index) => {
+                const positionCell = document.getElementById(`position-${record.id}`);
+                if (positionCell) {
+                    positionCell.textContent = index + 1;
+                }
+            });
+        }
+
+        // FUNGSI UTAMA UNTUK MEMBANDINGKAN MASA (LOWER IS BETTER)
+        function compareTimes(timeA, timeB) {
+            const parseTime = (timeStr) => {
+                const parts = timeStr.split(':');
+                
+                // Format HH:MM:SS:MS (atau MM:SS:MS jika tiada HH)
+                if (parts.length >= 3) { 
+                    const ms = parseInt(parts.pop()) || 0;
+                    const ss = parseInt(parts.pop()) || 0;
+                    const mm = parseInt(parts.pop()) || 0;
+                    const hh = parseInt(parts.pop() || 0);
+
+                    return hh * 3600000 + mm * 60000 + ss * 1000 + ms;
+                } else if (parts.length === 2) { // Assume SS:MS (e.g. 12:50)
+                    const ms = parseInt(parts.pop()) || 0;
+                    const ss = parseInt(parts.pop()) || 0;
+                    return ss * 1000 + ms;
+                }
+                // Jika format tidak dikenali, cuba parse sebagai saat float
+                return parseFloat(timeStr) * 1000; 
+            };
+
+            return parseTime(timeA) - parseTime(timeB); // Hasil negatif = A lebih kecil (lebih baik)
+        }
+
+        async function handleFormSubmit(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const eventId = form.dataset.eventId;
+            const eventCategory = document.getElementById('event-category').value;
+            const ageCategory = document.getElementById('age-category').value;
+            const gender = document.getElementById('gender').value;
+            const eventName = `${eventCategory} ${gender} ${ageCategory}`;
+
+            const results = [];
+
+            // Collect results from form
+            form.querySelectorAll('tbody tr').forEach(row => {
+                const cells = row.cells;
+                const id = cells[1].textContent;
+                const name = cells[2].textContent;
+                const house = cells[3].textContent;
+                const record = row.querySelector('input').value;
+                const position = cells[cells.length - 1].textContent;
+
+                if (record && position && position !== '-') {
+                    results.push({
+                        id,
+                        name,
+                        house,
+                        record,
+                        position: parseInt(position)
+                    });
+                }
+            });
+
+            if (results.length === 0) {
+                showError('Tiada keputusan yang sah untuk disimpan.');
+                return;
+            }
+
+            try {
+                const eventDocRef = db.collection(COLLECTIONS.RESULTS).doc(eventId);
+
+                const newEventResult = {
+                    eventId: eventId,
+                    event: eventName,
+                    type: form.dataset.eventType,
+                    results: results,
+                    timestamp: new Date().toISOString()
+                };
+
+                // Save to Firebase
+                await eventDocRef.set(newEventResult);
+
+                // Update local data (for analysis view)
+                const existingIndex = eventResults.findIndex(r => r.eventId === eventId);
+                if (existingIndex !== -1) {
+                    eventResults[existingIndex] = newEventResult;
+                } else {
+                    eventResults.push(newEventResult);
+                }
+
+                // Check for records broken (async function)
+                checkRecordsBroken(eventName, results);
+
+                // Recalculate points and update UI
+                calculateHousePoints();
+                showSuccess('Keputusan berjaya disimpan ke Firebase!');
+                showSection('analysis-section');
+
+            } catch (error) {
+                console.error("Error saving results to Firebase:", error);
+                showError('Gagal menyimpan keputusan ke pangkalan data.');
+            }
+        }
+
+        function checkRecordsBroken(eventName, results) {
+            if (results.length === 0) return;
+
+            const currentRecord = records.find(r => r.ACARA === eventName);
+
+            if (!currentRecord) return;
+
+            // Find the best result (lowest time or highest distance)
+            const isTimeEvent = currentRecord.REKOD.includes(':');
+            const bestResult = results.reduce((best, current) => {
+                if (isTimeEvent) {
+                    return compareTimes(current.record, best.record) < 0 ? current : best;
+                } else {
+                    return parseFloat(current.record) > parseFloat(best.record) ? current : best;
+                }
+            }, results[0]);
+
+            let isRecordBroken = false;
+            
+            if (isTimeEvent) {
+                // Time record broken if new time is lower
+                isRecordBroken = compareTimes(bestResult.record, currentRecord.REKOD) < 0;
+            } else {
+                // Distance record broken if new distance is higher
+                isRecordBroken = parseFloat(bestResult.record) > parseFloat(currentRecord.REKOD);
+            }
+
+            if (isRecordBroken) {
+                displayRecordBroken(eventName, bestResult, currentRecord.REKOD, currentRecord.NAMA);
+            }
+        }
+
+        // --- ANALYSIS FUNCTIONS ---
+
+        function calculateHousePoints() {
+            housePoints = {};
+
+            eventResults.forEach(event => {
+                event.results.forEach(result => {
+                    if (!housePoints[result.house]) {
+                        housePoints[result.house] = { total: 0, wins: 0 };
+                    }
+
+                    const points = calculatePoints(result.position);
+                    housePoints[result.house].total += points;
+
+                    if (result.position === 1) {
+                        housePoints[result.house].wins += 1;
+                    }
+                });
+            });
+        }
+
+        function calculatePoints(position) {
+            const pointsSystem = {
+                1: 6, // Johan
+                2: 4, // Kedua
+                3: 3, // Ketiga
+                4: 1, // Keempat
+                5: 1  // Kelima dan seterusnya
+            };
+
+            return pointsSystem[position] || 1;
+        }
+
+        function displayAnalysis() {
+            calculateHousePoints(); // Ensure points are up-to-date
+            displayEventResults();
+            displayPointsTable();
+            displayChampion();
+        }
+
+        function displayEventResults() {
+            const container = document.getElementById('results-body');
+            container.innerHTML = '';
+
+            eventResults.forEach(event => {
+                event.results.forEach(result => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${event.event}</td>
+                        <td>${result.name}</td>
+                        <td>${result.house}</td>
+                        <td>${result.record}</td>
+                        <td>${result.position}</td>
+                        <td>${calculatePoints(result.position)}</td>
+                    `;
+                    container.appendChild(row);
+                });
+            });
+        }
+
+        function displayPointsTable() {
+            const container = document.getElementById('points-body');
+            container.innerHTML = '';
+
+            const sortedHouses = Object.entries(housePoints)
+                .sort((a, b) => b[1].total - a[1].total);
+
+            sortedHouses.forEach(([house, data]) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${house}</td>
+                    <td>${data.total}</td>
+                    <td>${data.wins}</td>
+                `;
+                container.appendChild(row);
+            });
+        }
+        
+        function displayChampion() {
+            const container = document.getElementById('champion-container');
+            
+            if (Object.keys(housePoints).length === 0) {
+                container.innerHTML = '<p>Tiada data untuk menentukan juara</p>';
+                return;
+            }
+
+            const champion = Object.entries(housePoints)
+                .reduce((champ, current) => 
+                    current[1].total > champ[1].total ? current : champ
+                );
+
+            container.innerHTML = `
+                <div class="champion-display">
+                    <h2>JUARA KESELURUHAN</h2>
+                    <div class="champion-house">${champion[0]}</div>
+                    <p>dengan ${champion[1].total} mata keseluruhan</p>
+                    <p>${champion[1].wins} acara dimenangi</p>
+                </div>
+            `;
+        }
+
+        function filterResults(eventType) {
+            const resultsBody = document.getElementById('results-body');
+            const rows = resultsBody.getElementsByTagName('tr');
+
+            for (let row of rows) {
+                const eventName = row.cells[0].textContent.toLowerCase();
+                let showRow = true;
+
+                if (eventType !== 'all') {
+                    // Logic untuk menapis acara balapan (mengandungi 'meter' tetapi bukan 'lompat'/'lontar')
+                    const isTrack = eventName.includes('meter') && !eventName.includes('lompat') && !eventName.includes('lontar');
+                    // Logic untuk menapis acara padang
+                    const isField = eventName.includes('lompat') || eventName.includes('lontar');
+                    // Logic untuk menapis acara relay
+                    const isRelay = eventName.includes('4x100');
+
+                    if (eventType === 'track' && !isTrack) {
+                        showRow = false;
+                    } else if (eventType === 'field' && !isField) {
+                        showRow = false;
+                    } else if (eventType === 'relay' && !isRelay) {
+                        showRow = false;
+                    }
+                }
+
+                row.style.display = showRow ? '' : 'none';
+            }
+        }
+
+        // --- STATUS & ALERT UTILITIES ---
+
+        function displayRecordBroken(eventName, result, oldRecord, oldHolder) {
+            const alertsContainer = document.getElementById('record-alerts');
+            const alert = document.createElement('div');
+            alert.className = 'record-broken';
+            alert.innerHTML = `
+                🎉 REKOD BAHARU! 🎉<br>
+                <strong>${eventName}</strong><br>
+                Dipecahkan oleh <strong>${result.name}</strong><br>
+                Rekod lama: ${oldRecord} (${oldHolder})<br>
+                Rekod baru: ${result.record}
+            `;
+            alertsContainer.appendChild(alert);
+
+            setTimeout(() => {
+                alert.remove();
+            }, 10000);
+        }
+
+        function showSuccess(message) {
+            showStatusMessage(message, 'status-success');
+        }
+
+        function showError(message) {
+            showStatusMessage(message, 'status-error');
+        }
+        
+        function showInfo(message) {
+            showStatusMessage(message, 'status-info');
+        }
+
+        function showStatusMessage(message, className) {
+            const existingMessages = document.querySelectorAll('.status-message');
+            existingMessages.forEach(msg => msg.remove());
+
+            const statusDiv = document.createElement('div');
+            statusDiv.className = `status-message ${className}`;
+            statusDiv.textContent = message;
+
+            const currentSection = document.querySelector('section.active .container');
+            if (currentSection) {
+                currentSection.insertBefore(statusDiv, currentSection.firstChild);
+
+                setTimeout(() => {
+                    statusDiv.remove();
+                }, 5000);
+            }
+        }
+
+        // --- PADAM / RESET DATA (ADMIN ONLY) ---
+
+        async function handleResetData() {
+            if (!currentUser || currentUser.role !== 'admin') {
+                showError('Anda tiada kebenaran untuk melakukan tindakan ini.');
+                return;
+            }
+
+            const confirmation = confirm("⚠️ AMARAN KRITIKAL! Adakah anda pasti mahu memadamkan SEMUA data kejohanan (Peserta, Rekod, Keputusan, Borang Lorong)? Tindakan ini TIDAK boleh diterbalikkan.");
+            
+            if (!confirmation) {
+                showInfo('Operasi pemadaman data dibatalkan.');
+                return;
+            }
+
+            try {
+                const collectionsToReset = [
+                    COLLECTIONS.PARTICIPANTS,
+                    COLLECTIONS.RECORDS,
+                    COLLECTIONS.RESULTS,
+                    COLLECTIONS.LANE_ASSIGNMENTS
+                    // Note: userRoles collection is NOT reset here
+                ];
+
+                for (const collectionName of collectionsToReset) {
+                    const snapshot = await db.collection(collectionName).get();
+                    const batch = db.batch();
+                    
+                    snapshot.docs.forEach(doc => {
+                        batch.delete(doc.ref);
+                    });
+                    
+                    await batch.commit();
+                    console.log(`Collection ${collectionName} reset successfully.`);
+                }
+
+                // Reset local state
+                participants = [];
+                records = [];
+                eventResults = [];
+                housePoints = {};
+                
+                // Refresh UI
+                showSuccess('✅ SEMUA DATA KEJOHANAN BERJAYA DIRESET dan PADAM dari Firebase!');
+                showSection('analysis-section');
+            } catch (error) {
+                console.error("Error resetting data:", error);
+                showError('Gagal mereset data. Sila semak konsol untuk butiran ralat Firebase.');
+            }
+        }
+    </script>
+</body>
+</html>
