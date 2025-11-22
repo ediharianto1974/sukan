@@ -707,7 +707,7 @@
             });
         }
 
-        function setupEventListeners() {
+function setupEventListeners() {
             // Navigation
             document.getElementById('nav-analysis').addEventListener('click', () => showSection('analysis-section'));
             document.getElementById('nav-generate').addEventListener('click', () => showSection('generate-section'));
@@ -742,12 +742,55 @@
             // Generate form
             document.getElementById('generate-form-btn').addEventListener('click', generateEventForm);
 
+            // ⚠️ PENAMBAHBAIKAN: Kemas kini pilihan acara apabila Jenis Acara berubah
+            document.getElementById('event-type').addEventListener('change', updateEventCategories);
+            // Panggilan awal untuk memaparkan senarai acara individu secara lalai
+            updateEventCategories();
+
             // File uploads
             document.getElementById('data-csv').addEventListener('change', (e) => handleFileUpload(e, COLLECTIONS.PARTICIPANTS, 'Peserta'));
             document.getElementById('record-csv').addEventListener('change', (e) => handleFileUpload(e, COLLECTIONS.RECORDS, 'Rekod'));
 
             // Padam / Reset Data
             document.getElementById('reset-data-btn').addEventListener('click', handleResetData);
+        }
+        
+        // --- FUNGSI BARU UNTUK MENGEMAS KINI PILIHAN ACARA ---
+
+        function updateEventCategories() {
+            const eventTypeSelect = document.getElementById('event-type');
+            const eventCategorySelect = document.getElementById('event-category');
+            const selectedEventType = eventTypeSelect.value;
+
+            // Kosongkan pilihan semasa
+            eventCategorySelect.innerHTML = ''; 
+
+            let options = [];
+
+            if (selectedEventType === 'individual') {
+                // Acara Individu
+                options = [
+                    { value: "100 METER", text: "100 Meter" },
+                    { value: "200 METER", text: "200 Meter" },
+                    { value: "100 METER BERPAGAR", text: "100 Meter Berpagar" },
+                    { value: "LOMPAT JAUH", text: "Lompat Jauh" },
+                    { value: "LOMPAT TINGGI", text: "Lompat Tinggi" },
+                    { value: "LONTAR PELURU", text: "Lontar Peluru" },
+                ];
+            } else if (selectedEventType === 'relay') {
+                // Acara Relay (Hanya 4x100 Meter)
+                options = [
+                    // Tambah 4x100 Meter sebagai satu-satunya pilihan Relay
+                    { value: "4X100 METER", text: "4x100 Meter Relay" }, 
+                ];
+            }
+
+            options.forEach(optionData => {
+                const option = document.createElement('option');
+                option.value = optionData.value;
+                option.textContent = optionData.text;
+                eventCategorySelect.appendChild(option);
+            });
         }
         
         // --- FIREBASE DATA FUNCTIONS (CRUD) ---
